@@ -48,31 +48,30 @@ async function addAddress(contact: Person): Promise<void> {
     "Would you like to add a new address to this contact? Please, write down the information we need to proccess changes successfully"
   );
 
-  const { newRoad, newNumber, newFloor, newLetter, newZip, newLocation, newState } = await prompt.get([
-    "newRoad",
-    "newNumber",
-    "newFloor",
-    "newLetter",
-    "newZip",
-    "newLocation",
-    "newState",
+  const { road, number, floor, letter, zip, location, state } : Address = await prompt.get([
+    "road",
+    "number",
+    "floor",
+    "letter",
+    "zip",
+    "location",
+    "state",
   ]);
   try {
     const addressToAdd: Address = new Address(
-      newRoad,
-      newNumber,
-      newFloor,
-      newLetter,
-      newZip,
-      newLocation,
-      newState
+      road,
+      number,
+      floor,
+      letter,
+      zip,
+      location,
+      state
     );
   
     // Set Address to array.
     contact.add_address(addressToAdd);
   } catch {
     console.log("We couldn't update the address, please check data introduced!");
-
   }
 }
 
@@ -80,10 +79,10 @@ async function addTelephone(contact: Person): Promise<void> {
   console.log(
     "To add a new telephone, we need a new number and a new type (personal/professional)."
   );
-  const { newNumber, newType } = await prompt.get(["newNumber", "newType"]);
+  const { telephone, type }: TelephoneContact = await prompt.get(["telephone", "type"]);
   const newTelephoneToAdd: TelephoneContact = new TelephoneContact(
-    parseInt(newNumber),
-    newType
+    telephone,
+    type
   );
 
   // Set new telephone.
@@ -94,8 +93,8 @@ async function addMail(contact: Person): Promise<void> {
   console.log(
     "To add a new mail, we need a new mail and a new type (personal/professional)."
   );
-  const { newMail, newType } = await prompt.get(["newMail", "newType"]);
-  const newMailtoAdd: MailContact = new MailContact(newMail, newType);
+  const { mail, type }: MailContact = await prompt.get(["mail", "type"]);
+  const newMailtoAdd: MailContact = new MailContact(mail, type);
 
   // Set new email.
   contact.add_mail(newMailtoAdd);
