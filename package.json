@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile" : "tsc Main.ts",
-    "start" : "node Main.js",
+    "compile": "tsc Main.ts",
+    "start": "node Main.js",
     "check": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +22,6 @@
   "dependencies": {
     "@types/prompt": "^1.1.0",
     "prompt": "^1.1.0",
-    "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   },
   "devDependencies": {

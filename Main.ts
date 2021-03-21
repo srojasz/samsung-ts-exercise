@@ -60,10 +60,10 @@ async function addAddress(contact: Person): Promise<void> {
   try {
     const addressToAdd: Address = new Address(
       newRoad,
-      parseInt(newNumber),
-      parseInt(newFloor),
+      newNumber,
+      newFloor,
       newLetter,
-      parseInt(newZip),
+      newZip,
       newLocation,
       newState
     );
