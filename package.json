@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/srojasz/samsung-ts.git"
+    "url": "git+https://github.com/srojasz/samsung-ts-exercise.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/srojasz/samsung-ts/issues"
+    "url": "https://github.com/srojasz/samsung-ts-exercise/issues"
   },
-  "homepage": "https://github.com/srojasz/samsung-ts#readme",
+  "homepage": "https://github.com/srojasz/samsung-ts-exercise#readme",
   "dependencies": {
     "@types/prompt": "^1.1.0",
     "prompt": "^1.1.0",
